@@ -1,3 +1,27 @@
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { ProductsProvider } from './context/ProductsContext'; // Adjust the import path as necessary
@@ -17,7 +41,7 @@ function App() {
       <ProductsProvider>
         <Router>
           <div>
-            {/* Links */}
+            {/* Navigation Links */}
             <nav className="navbar navbar-expand navbar-light full-width">
               <div className="container-fluid">
                 <div className="collapse navbar-collapse" id="navbarNav">
@@ -43,7 +67,7 @@ function App() {
             </nav>
 
 
-            {/* Routes*/}
+            {/* Routes for different pages */}
             <div className="container mt-3">
               <Routes>
                 <Route path="/products" element={<ProductList />} />
