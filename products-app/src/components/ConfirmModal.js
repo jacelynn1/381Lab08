@@ -1,6 +1,4 @@
 import React from 'react';
-import React , {useState} from 'react';
-
 
 const ConfirmModal = ({ show, onClose, onConfirm, title, children }) => {
   if (!show) {
@@ -29,3 +27,5 @@ const ConfirmModal = ({ show, onClose, onConfirm, title, children }) => {
     </div>
   );
 };
+
+export default ConfirmModal;
